@@ -2,7 +2,7 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -12,7 +12,7 @@ public class SimpleTest {
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.holdBrowserOpen = true;
+
     }
 
     @Test
@@ -21,12 +21,13 @@ public class SimpleTest {
         $("#firstName").setValue("firstName");
         $("#lastName").setValue("lastName");
         $("#userEmail").setValue("userEmail@mail.com");
-        $("#gender-radio-1").click();
+
+        $("label[for='gender-radio-1']").click();
         $("#userNumber").setValue("2222222222");
         $("#subjectsInput").setValue("subjectsInput");
-        $("#hobbies-checkbox-1").click();
-        $("#hobbies-checkbox-2").click();
-        $("#hobbies-checkbox-3").click();
+        $("label[for='hobbies-checkbox-1']").click();
+        $("label[for='hobbies-checkbox-2']").click();
+        $("label[for='hobbies-checkbox-3']").click();
 
         $("#currentAddress").setValue("currentAddress");
         $("#subjectsInput").setValue("subjectsInput");
