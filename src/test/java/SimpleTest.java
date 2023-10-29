@@ -35,6 +35,7 @@ public class SimpleTest {
         $(byText("NCR")).click();
         $(byText("Select City")).click();
         $(byText("Gurgaon")).click();
+        //just for test
 
     }
 }
