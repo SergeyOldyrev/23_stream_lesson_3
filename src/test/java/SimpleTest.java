@@ -19,7 +19,7 @@ public class SimpleTest {
     }
 
     @Test
-    void successfulSearchTest() throws InterruptedException {
+    void successfulSearchTest() {
         String firstName = "firstName";
         String lastName = "lastName";
         String userEmail = "userEmail@mail.com";
