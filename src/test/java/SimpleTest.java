@@ -29,6 +29,7 @@ public class SimpleTest {
         $("label[for='hobbies-checkbox-2']").click();
         $("label[for='hobbies-checkbox-3']").click();
 
+        $("#uploadPicture").uploadFromClasspath("test.png");
         $("#currentAddress").setValue("currentAddress");
         $("#subjectsInput").setValue("subjectsInput");
 
